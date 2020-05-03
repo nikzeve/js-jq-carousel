@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background: rgb(0,36,16);
+    background: linear-gradient(349deg, rgba(0,36,16,1) 22%, rgba(17,191,194,1) 60%, rgba(89,255,196,1) 100%);
+}
+
 .container {
     width: 70%;
     height: 100vh;
@@ -29,6 +34,7 @@
     width: 90%;
     height: 100%;
     float: left;
+    position: relative;
 }
 
 #center img {
@@ -42,10 +48,21 @@
     justify-content: flex-end;
 }
 
-.fas {
+.fiftypx{
     font-size: 50px;
 }
 
 #center img.active {
     display: block;
+}
+
+.pallini {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pallini i.active {
+    color: white;
 }
