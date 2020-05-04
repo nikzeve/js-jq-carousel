@@ -1,4 +1,31 @@
 
+var clock = setInterval(myFunction, 3000);
+function myFunction() {
+var img_visualizzata = $('img.active');
+var pallino_visualizzato = $('i.active');
+
+img_visualizzata.removeClass('active');
+
+pallino_visualizzato.removeClass('active');
+
+var img_successiva = img_visualizzata.next('img');
+
+var pallino_successivo = pallino_visualizzato.next('i');
+
+if (img_successiva.length != 0) {
+
+img_successiva.addClass('active');
+pallino_successivo.addClass('active');
+
+} else {
+img_successiva = $('img:first-of-type');
+img_successiva.addClass('active');
+
+$('.fa-circle:first-of-type').addClass('active');
+}
+}
+
+
 
 $('#right').click(function() {
     var img_visualizzata = $('img.active');
